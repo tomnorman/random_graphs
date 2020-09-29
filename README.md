@@ -4,16 +4,18 @@ A tool to help understand probability on graphs.
 
 ## Graph (G)
 
-Implemented with a matrix (G.mat)
-The vertices ([V]) are numbered from zero, so:
+Undirected simple graph, implemented with a matrix (G.mat).
 
-<img src="https://render.githubusercontent.com/render/math?math=\forall i, j \in [V]:">
+The vertices ([V]) start from zero, so:
 
-* if i == j: node i weight
+<img src="https://render.githubusercontent.com/render/math?math=\forall i \in [V]:">
 
-* else: weight of edge from i to j, zero if no edge.
+* G.mat[i,i] is node i weight
 
-G.mat is symmetric.
+* <img src="https://render.githubusercontent.com/render/math?math=\forall j \in [V], j \neq i:">
+G.mat[i,j] = weight of edge from i to j, zero if no edge.
+
+(G.mat is symmetric)
 
 ## Algorithms
 
