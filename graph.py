@@ -57,6 +57,7 @@ class mat_graph:
 
     def add_edge(self, ver1: int, ver2: int, w=1) -> None:
         self.reset()
+        self.positive = (w > 0)
         self.mat[ver1, ver2] = w
         self.mat[ver2, ver1] = w
 

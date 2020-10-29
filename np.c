@@ -88,6 +88,7 @@ uint chi(double* mat, uint nodes, float a) {
 			double* mat_S = subMat(mat, nodes, S, nodes_S);
 			tmp = chi(mat_S, nodes_S, a) + chi(mat_not_S, nodes_S, a);
 			if (k > tmp)	k = tmp;
+			free(mat_S);
 		}
 
 		free(mat_not_S);
